@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """Web Framework"""
-from os import abort
 from flask import render_template
-from ctypes.wintypes import INT
-from email.policy import default
 from flask import Flask
 
 app = Flask(__name__)
