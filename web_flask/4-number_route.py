@@ -29,7 +29,7 @@ def python(text="is cool"):
     return 'Python %s' % text.replace("_", " ")
 
 
-@app.route('/number/<int:n>')
+@app.route('/number/<int:n>', strict_slashes = False)
 def numb(n):
     return '{} is a number'.format(n)
 
