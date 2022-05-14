@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Web Framework"""
-from ctypes.wintypes import INT
-from email.policy import default
 from flask import Flask
 
 app = Flask(__name__)
