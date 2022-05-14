@@ -33,7 +33,7 @@ def python(text="is cool"):
 
 @app.route('/number/<int:n>')
 def numb(n):
-    return f'{n} is a number'
+    return '{} is a number'.format(n)
 
 
 @app.route('/number_template/<int:n>')
