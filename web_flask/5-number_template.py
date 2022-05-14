@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Web Framework"""
+from os import abort
+from flask import render_template
 from ctypes.wintypes import INT
 from email.policy import default
 from flask import Flask
@@ -32,6 +34,11 @@ def python(text="is cool"):
 @app.route('/number/<int:n>')
 def numb(n):
     return f'{n} is a number'
+
+
+@app.route('/number_template/<int:n>')
+def index(n):
+    return render_template("5-number.html", n=n)
 
 
 if __name__ == '__main__':

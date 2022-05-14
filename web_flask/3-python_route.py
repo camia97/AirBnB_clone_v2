@@ -11,18 +11,22 @@ strict_slashes = False
 def hello():
     return 'Hello HBNB!'
 
+
 @app.route('/hbnb')
 def hbnb():
-	return 'HBNB'
+    return 'HBNB'
+
 
 @app.route('/c/<text>')
 def c(text):
-	return 'C %s' % text.replace("_", " ")
+    return 'C %s' % text.replace("_", " ")
+
 
 @app.route('/python/<text>')
 @app.route('/python/')
-def python(text = "is cool"):
-	return 'Python %s' % text.replace("_", " ")
+def python(text="is cool"):
+    return 'Python %s' % text.replace("_", " ")
+
 
 if __name__ == '__main__':
-	app.run()
+    app.run()

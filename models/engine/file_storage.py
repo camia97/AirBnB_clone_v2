@@ -64,3 +64,7 @@ class FileStorage:
         if obj is not None:
             key = obj.to_dict()['__class__'] + '.' + obj.id
             self.__objects.pop(key)
+
+    def close(self):
+        """Call reload method"""
+        return self.reload()
